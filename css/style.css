@@ -1,0 +1,191 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.primary{
+    color: green;
+}
+.container{
+    height: 100vh;
+    background-image: url('../back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.container .box{
+   display: flex;
+   margin: auto;
+    width: 70%;
+}
+.container .chat-background{
+    background-image: url('../chat.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70%;
+}
+.nav{
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    display: none;
+    z-index: 1000;
+}
+.container .box .chat-box{
+    
+    height: 70vh;
+    padding: 20px;
+    overflow-y: auto;
+}
+.box .live{
+    background-image: url('../live.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    overflow-y: auto;
+}
+.live-hide{
+    width: 30%;
+    padding: 20px;
+}
+.live-show{
+    position: absolute;
+    left: 0;
+    margin: 47px 0px;
+    width: 70%;
+    height: 70%;
+    padding: 20px;
+    transition: .3s ease;
+}
+
+.box .live .person{
+    display: flex;
+    margin: 10px 0;
+    background-color: rgba(45, 43, 43, 0.744);
+    padding: 10px 3px;
+}
+.emoji{
+    margin-right: 10px;
+}
+.box .live h2{
+    color: green;
+}
+.box .live .emoji{
+    color: yellow;
+}
+.box .live .Refresh{
+    background-color: blue;
+    padding: 4px;
+    cursor: pointer;
+}
+#send-container{
+    background-color: none;
+}
+.container form{
+    text-align: center;
+    margin:5px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.container form input[type=text]{
+    width: 70%;
+    padding: 10px 25px;
+    font-size: 20px;
+    margin: 0 21px 3px 0px;
+    border-radius: 20px;
+
+}
+.container form button{
+    border-radius: 8px;
+    padding: 10px;
+    background-color: rgba(255, 0, 0, 0.802);
+    color: white;
+}
+.center{
+  color: white;
+  background-color: black;
+  display: block;
+  clear: both;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 17px;
+}
+.left{
+    padding:2px 8px;
+    background-color: rgb(100, 99, 99);
+    color: white;
+    float: left;
+    clear: both;
+    border-radius:0 8px 8px 0;
+    margin-bottom: 17px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.right{
+    padding: 2px 8px;
+    background-color: rgb(100, 99, 99);
+    color: white;
+    float: right;
+    clear: both;
+    border-radius: 8px 0 0 8px ;
+    margin-bottom: 17px;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+
+@media screen and (max-width:720px){
+   .container .box{
+        width: 100%;
+    }
+    .chat-background{
+        width: 70%;
+    }
+    .live{
+        width: 30%;
+    }
+    .container form input[type=text]{
+        padding:5px 15px ;
+        margin: 0;
+    }
+    
+    .container form button{
+        padding: 5px;
+    }
+    html,.message{
+        font-size: 80%;
+    }
+}
+@media screen and (max-width:526px){
+    .container .box{
+        width: 100%;
+    }
+    .live-hide{
+        position: absolute;
+        left:-100%;
+    }
+    .container .chat-background{
+        width: 100%;
+    }
+    .nav{
+        display: block;
+    }
+   
+}
+@media screen and (max-width:341px){
+    .container form input[type=text]{
+        padding:0 5px ;
+    }
+}
